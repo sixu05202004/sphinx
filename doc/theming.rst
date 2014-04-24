@@ -1,28 +1,23 @@
 .. highlightlang:: python
 
-HTML theming support
+HTML主题支持
 ====================
 
 .. versionadded:: 0.6
 
-Sphinx supports changing the appearance of its HTML output via *themes*.  A
-theme is a collection of HTML templates, stylesheet(s) and other static files.
-Additionally, it has a configuration file which specifies from which theme to
-inherit, which highlighting style to use, and what options exist for customizing
-the theme's look and feel.
+Sphinx可以通过主题来改变HTML输出的样式，主题是一个包括模板、样式表和静态文件
+的集合。另外，主题还包括一个配置文件，通过这个配置文件可以指定主题、选择高亮
+格式，同时还可以确定定制主题例如Logo等信息的选项。
 
-Themes are meant to be project-unaware, so they can be used for different
-projects without change.
+主题意味着通用的，所以他们可以在不被改动的情况下用于不同的Sphinx项目。
 
 
-Using a theme
+使用主题
 -------------
 
-Using an existing theme is easy.  If the theme is builtin to Sphinx, you only
-need to set the :confval:`html_theme` config value.  With the
-:confval:`html_theme_options` config value you can set theme-specific options
-that change the look and feel.  For example, you could have the following in
-your :file:`conf.py`::
+使用一个存在的主题是很容易的，如果选择使用Sphinx内置主题，那么你只需要配置
+`html_theme`,通过配置 `html_theme_options` ,你可以更详细的配置主题。比如你
+可以像下边的例子一样在你的 `conf.py` 中配置:: 
 
     html_theme = "default"
     html_theme_options = {
@@ -30,26 +25,22 @@ your :file:`conf.py`::
         "relbarbgcolor": "black"
     }
 
-That would give you the default theme, but with a sidebar on the right side and
-a black background for the relation bar (the bar with the navigation links at
-the page's top and bottom).
+以上配置将会用默认主题配置你的Sphinx文档，不一样的是，你的主题页面将会带着
+一个右边栏，同时关系栏也将被设为黑色背景(关系栏就是在页眉和页脚带着导航连接
+的栏)。
 
-If the theme does not come with Sphinx, it can be in two static forms: either a
-directory (containing :file:`theme.conf` and other needed files), or a zip file
-with the same contents.  Either of them must be put where Sphinx can find it;
-for this there is the config value :confval:`html_theme_path`.  It gives a list
-of directories, relative to the directory containing :file:`conf.py`, that can
-contain theme directories or zip files.  For example, if you have a theme in the
-file :file:`blue.zip`, you can put it right in the directory containing
-:file:`conf.py` and use this configuration::
+如果你选择的主题不是Sphinx内置主题，那么他必须是一个包含 `theme.conf` 文件的
+文件夹或者zip压缩包，主题包需要被放在可以被Sphinx找到的地方，这个位置可以在
+`html_theme_path` 被设置，这个值给了一个目录列表，每个目录包含 `conf.py` ，
+包括主题目录或zip文件。例如，如果你有一个主题文件放在 `blue.zip` 里，你可以将
+`blue.zip` 放到包含 `conf.py` 文件的目录里并使用以下配置::
 
     html_theme = "blue"
     html_theme_path = ["."]
 
-The third form provides your theme path dynamically to Sphinx if the
-``setuptools`` package is installed.  You can provide an entry point section
-called ``sphinx_themes`` in your setup.py file and write a ``get_path`` function
-that has to return the directory with themes in it::
+如果你已经安装 ``setuptools`` 包，你可以使用第三种方法即向Sphinx提供主题的
+地址。你需要在setup.py文件里的entry_points条目写入 ``sphinx_themes`` ，并
+增加一个返回主题目录地址的 ``get_path`` 函数::
 
     // in your 'setup.py'
 
@@ -70,7 +61,7 @@ that has to return the directory with themes in it::
     template_path = path.join(package_dir, 'themes')
 
     def get_path():
-        return template_path
+        return  template_path
 
 .. versionadded:: 1.2
    'sphinx_themes' entry_points feature.
@@ -78,7 +69,7 @@ that has to return the directory with themes in it::
 
 .. _builtin-themes:
 
-Builtin themes
+内置主题
 --------------
 
 .. cssclass:: right
