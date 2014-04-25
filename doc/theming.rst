@@ -204,8 +204,8 @@ Sphinx内置了一些主题可供选择
 
 * **traditional** -- 类似以前python文档的主题.目前除了 *nosidebar* 和 *sidebarwidth* 没有其他选项.
 
-* **epub** -- 一个用于编译epub的主题. 这个主题尽力节省视觉空间,是哥ebook的稀缺资
-  源。支持以下选项:
+* **epub** -- 一个用于编译epub的主题. 这个主题尽力节省视觉空间,是哥ebook的
+  稀缺资源。支持以下选项:
 
   - **relbar1** (true 或 false,默认为true): 如果选择true,将会生成 `relbar1`
   ,否则省略。
@@ -219,8 +219,8 @@ Sphinx内置了一些主题可供选择
 
 * 一个:file:`theme.conf` 文件。
 * HTML模板(如果需要)
-* 一个包含静态文件的 ``static/``  文件夹，他将会被复制到构建目录的静态文件夹。静
-  态文件包括图片、样式表、脚本文件等。
+* 一个包含静态文件的 ``static/``  文件夹，他将会被复制到构建目录的静
+  态文件夹。静态文件包括图片、样式表、脚本文件等。
 
 :file:`theme.conf` 文件应该是INI格式 [1]_ (可被python标准库的:mod:`ConfigParser`
 模块识别)，他的结构如下:
@@ -235,13 +235,14 @@ Sphinx内置了一些主题可供选择
     [options]
     variable = default value
 
-* **inherit** 设置为 ``base theme`` 或 ``none`` 。base thmes 将会被用于搜寻missi
-  ng的主题(如果选择 ``basic`` 作为basic主题，那么将不得不支持所有模板),他的选项将
-  会被继承，静态文件也一样。
+* **inherit** 设置为 ``base theme`` 或 ``none`` 。base thmes 将会被用于
+  搜寻missing的主题(如果选择 ``basic`` 作为basic主题，那么将不得不支持所
+  有模板),他的选项将会被继承，静态文件也一样。
 
-* **stylesheet** 设置了一个将会被在HTML头部引用的CSS文件，如果你需要更多的CSS文件
-  , 或者通过CSS ``import`` 引入一个，或者使用一个定制的HTML模板，增加 ``<link re
-  l="stylesheet">`` 标签。设置 :confval:`html_style` 将会覆盖配置。
+* **stylesheet** 设置了一个将会被在HTML头部引用的CSS文件，如果你需要更多
+  的CSS文件, 或者通过CSS ``import`` 引入一个，或者使用一个定制的HTML模板
+  ，增加 ``<link rel="stylesheet">`` 标签。设置 :confval:`html_style` 将
+  会覆盖配置。
 
 * **pygments_style** 设置Pygments风格来使用高亮。他会被:confval:`pygments_style`
   的配置覆盖。
@@ -250,41 +251,31 @@ Sphinx内置了一些主题可供选择
   的配置所覆盖。
 
 
-
+模板
 ~~~~~~~~~~
 
-The :doc:`guide to templating <templating>` is helpful if you want to write your
-own templates.  What is important to keep in mind is the order in which Sphinx
-searches for templates:
+:doc:`guide to templating <templating>` 可以帮助你写自己的模板。你需要特别
+注意的选择sphinx 搜索:
 
-* First, in the user's ``templates_path`` directories.
-* Then, in the selected theme.
+* 首先, 在用户的 ``templates_path`` 的文件夹。
+* 然后，选择主题。
 * Then, in its base theme, its base's base theme, etc.
 
-When extending a template in the base theme with the same name, use the theme
-name as an explicit directory: ``{% extends "basic/layout.html" %}``.  From a
-user ``templates_path`` template, you can still use the "exclamation mark"
-syntax as described in the templating document.
+当用一个相同的名字在base theme主题上进行扩展,使用一个比较明确的文件夹:
+``{% extends "basic/layout.html" %}`` 。从用户的 ``templates_path`` 模板。
+你仍然可以使用 `exclamation mark`` 语法作为模板文档的描述。
 
 
-Static templates
-~~~~~~~~~~~~~~~~
+静态模板
+~~~~~~~~~~~~~~~
 
-Since theme options are meant for the user to configure a theme more easily,
-without having to write a custom stylesheet, it is necessary to be able to
-template static files as well as HTML files.  Therefore, Sphinx supports
-so-called "static templates", like this:
+由于模板选项可以使用户很简单的定制自己的模板，而不用写样式表，因此Sphinx
+支持"static templets"。
 
-If the name of a file in the ``static/`` directory of a theme (or in the user's
-static path, for that matter) ends with ``_t``, it will be processed by the
-template engine.  The ``_t`` will be left from the final file name.  For
-example, the *default* theme has a file ``static/default.css_t`` which uses
-templating to put the color options into the stylesheet.  When a documentation
-is built with the default theme, the output directory will contain a
-``_static/default.css`` file where all template tags have been processed.
+如果位于 ``static/`` 目录的主题的文件名字以 ``_t`` 结尾，那么他将会被模板
+引擎解析, ``_t`` 将会被留下。例如， *default* 主题有一个使用模板解析把颜
+色选项加入样式表的 ``static/default.css_t`` 文件，当文档用默认主题构建是，
+输出文件夹将会包含一个 ``_static/default.css`` 文件。
 
-
-.. [1] It is not an executable Python file, as opposed to :file:`conf.py`,
-       because that would pose an unnecessary security risk if themes are
-       shared.
-
+.. [1] :file:`conf.py`不应该是一个可执行的python文件，因为当主题分享的时候
+   这将回事一个不必要得安全风险。
