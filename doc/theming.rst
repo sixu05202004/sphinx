@@ -103,72 +103,62 @@ Sphinx可以通过主题来改变HTML输出的样式，主题是一个包括模�
 .. |haiku|       image:: themes/haiku.png
 .. |pyramid|     image:: themes/pyramid.png
 
-Sphinx comes with a selection of themes to choose from.
+Sphinx内置了一些主题可供选择
 
-These themes are:
+内置主题如下:
 
-* **basic** -- This is a basically unstyled layout used as the base for the
-  other themes, and usable as the base for custom themes as well.  The HTML
-  contains all important elements like sidebar and relation bar.  There are
-  these options (which are inherited by the other themes):
+* **basic** -- 这是一个被用于其他主题的无样式布局，也可以作为自定义定制主题
+  的基础。HTML包含了所有重要的元素，比如边栏，关系栏等。这里有一些被其他主
+  题继承的选项:
 
-  - **nosidebar** (true or false): Don't include the sidebar.  Defaults to
-    false.
+  - **nosidebar** (true 或 false): 不包括边栏.  默认是false.
 
-  - **sidebarwidth** (an integer): Width of the sidebar in pixels.  (Do not
-    include ``px`` in the value.)  Defaults to 230 pixels.
+  - **sidebarwidth** (一个 integer): 边栏的宽.  (以像素为单位，但是不要在参
+  数中加入 ``px`` 值.)  默认宽为230像素.
 
-* **default** -- This is the default theme, which looks like `the Python
-  documentation <http://docs.python.org/>`_.  It can be customized via these
-  options:
+* **default** -- 这是Sphinx的默认主题, 诸如 `the Python
+  documentation <http://docs.python.org/>` 就是采用这个模板.  你可以通过以下
+  选项定制主题:
 
-  - **rightsidebar** (true or false): Put the sidebar on the right side.
-    Defaults to false.
+  - **rightsidebar** (true 或 false): 将边栏放在右边，默认是false.
 
-  - **stickysidebar** (true or false): Make the sidebar "fixed" so that it
-    doesn't scroll out of view for long body content.  This may not work well
-    with all browsers.  Defaults to false.
+  - **stickysidebar** (true 或 false): 边栏固定，使边栏不随页面的滚动而滚
+  动,它可能不兼容所有浏览器。默认是false。
 
-  - **collapsiblesidebar** (true or false): Add an *experimental* JavaScript
-    snippet that makes the sidebar collapsible via a button on its side.
-    *Doesn't work with "stickysidebar".* Defaults to false.
+  - **collapsiblesidebar** (true 或 false): 通过Javascript代码片段使边栏实
+  现折叠，*不要和"rightsidebar" "stickysidebar"同时使用*，默认是false。
 
-  - **externalrefs** (true or false): Display external links differently from
-    internal links.  Defaults to false.
+  - **externalrefs** (true 或 false): 内部连接和外部链接显示区别，默认是flase。
 
-  There are also various color and font options that can change the color scheme
-  without having to write a custom stylesheet:
+  这里还有一些颜色和字体选项可以方便的更改主题的配色，不用写样式表。
 
-  - **footerbgcolor** (CSS color): Background color for the footer line.
-  - **footertextcolor** (CSS color): Text color for the footer line.
-  - **sidebarbgcolor** (CSS color): Background color for the sidebar.
-  - **sidebarbtncolor** (CSS color): Background color for the sidebar collapse
-    button (used when *collapsiblesidebar* is true).
-  - **sidebartextcolor** (CSS color): Text color for the sidebar.
-  - **sidebarlinkcolor** (CSS color): Link color for the sidebar.
-  - **relbarbgcolor** (CSS color): Background color for the relation bar.
-  - **relbartextcolor** (CSS color): Text color for the relation bar.
-  - **relbarlinkcolor** (CSS color): Link color for the relation bar.
-  - **bgcolor** (CSS color): Body background color.
-  - **textcolor** (CSS color): Body text color.
-  - **linkcolor** (CSS color): Body link color.
-  - **visitedlinkcolor** (CSS color): Body color for visited links.
-  - **headbgcolor** (CSS color): Background color for headings.
-  - **headtextcolor** (CSS color): Text color for headings.
-  - **headlinkcolor** (CSS color): Link color for headings.
-  - **codebgcolor** (CSS color): Background color for code blocks.
-  - **codetextcolor** (CSS color): Default text color for code blocks, if not
-    set differently by the highlighting style.
+  - **footerbgcolor** (CSS color): 页脚(footer)的背景颜色。
+  - **footertextcolor** (CSS color): 页脚(footer)的文本颜色.
+  - **sidebarbgcolor** (CSS color): 边栏的背景颜色.
+  - **sidebarbtncolor** (CSS color): 控制边栏折叠按钮的背景颜色
+  (当 *collapsiblesidebar* 是 true 的时候使用).
+  - **sidebartextcolor** (CSS color): 边栏的文本颜色.
+  - **sidebarlinkcolor** (CSS color): 边栏的链接颜色.
+  - **relbarbgcolor** (CSS color): 关系栏的背景颜色.
+  - **relbartextcolor** (CSS color): 关系栏的文本颜色.
+  - **relbarlinkcolor** (CSS color): 关系栏的链接颜色.
+  - **bgcolor** (CSS color): 整体背景颜色.
+  - **textcolor** (CSS color): 整体文本颜色.
+  - **linkcolor** (CSS color): 整体链接颜色.
+  - **visitedlinkcolor** (CSS color): 以访问过链接颜色.
+  - **headbgcolor** (CSS color): 标题背景颜色.
+  - **headtextcolor** (CSS color): 标题文本颜色.
+  - **headlinkcolor** (CSS color): 标题链接颜色.
+  - **codebgcolor** (CSS color): 代码块的背景颜色.
+  - **codetextcolor** (CSS color): 代码块的默认文本颜色(如果没有配置高亮)。
 
-  - **bodyfont** (CSS font-family): Font for normal text.
-  - **headfont** (CSS font-family): Font for headings.
+  - **bodyfont** (CSS font-family): 正常文本的字体.
+  - **headfont** (CSS font-family): 标题的字体.
 
-* **sphinxdoc** -- The theme used for this documentation.  It features a sidebar
-  on the right side.  There are currently no options beyond *nosidebar* and
-  *sidebarwidth*.
+* **sphinxdoc** -- 主要用于文档的模板，特点是右边栏。目前除了 *nosidebar* 
+  和 *sidebarwidth*. 没有其他选项。
 
-* **scrolls** -- A more lightweight theme, based on `the Jinja documentation
-  <http://jinja.pocoo.org/>`_.  The following color options are available:
+* **scrolls** -- 一个更轻量的主题，基于 `jinja的文档主题 <http://jinja.pocoo.org/>` 。下面的颜色选项是可配置的:
 
   - **headerbordercolor**
   - **subheadlinecolor**
@@ -176,59 +166,53 @@ These themes are:
   - **visitedlinkcolor**
   - **admonitioncolor**
 
-* **agogo** -- A theme created by Andi Albrecht.  The following options are
-  supported:
+* **agogo** -- Andi Albrecht创作的一个主题.支持下列选项:
 
-  - **bodyfont** (CSS font family): Font for normal text.
-  - **headerfont** (CSS font family): Font for headings.
-  - **pagewidth** (CSS length): Width of the page content, default 70em.
-  - **documentwidth** (CSS length): Width of the document (without sidebar),
-    default 50em.
-  - **sidebarwidth** (CSS length): Width of the sidebar, default 20em.
-  - **bgcolor** (CSS color): Background color.
-  - **headerbg** (CSS value for "background"): background for the header area,
-    default a grayish gradient.
-  - **footerbg** (CSS value for "background"): background for the footer area,
-    default a light gray gradient.
-  - **linkcolor** (CSS color): Body link color.
-  - **headercolor1**, **headercolor2** (CSS color): colors for <h1> and <h2>
-    headings.
-  - **headerlinkcolor** (CSS color): Color for the backreference link in
-    headings.
-  - **textalign** (CSS *text-align* value): Text alignment for the body, default
-    is ``justify``.
+  - **bodyfont** (CSS font family): 正常文本的字体.
+  - **headerfont** (CSS font family): 标题字体.
+  - **pagewidth** (CSS length): 页面内容的宽度, 默认为70em.
+  - **documentwidth** (CSS length): 文档的宽度 (不带边栏),
+    默认为50em.
+  - **sidebarwidth** (CSS length): 边栏的宽度, 默认为20em.
+  - **bgcolor** (CSS color): 背景颜色.
+  - **headerbg** (CSS value for "background"): 标题部分的背景颜色，默认
+  为渐变浅灰  .
+  - **footerbg** (CSS value for "background"): 页脚部分的背景颜色，默认
+  为渐变浅灰  .
+  - **linkcolor** (CSS color): 整体链接颜色.
+  - **headercolor1**, **headercolor2** (CSS color): <h1>标题和<h2>标题
+  的背景颜色，默认为渐变浅灰。
+  - **headerlinkcolor** (CSS color): 题目中反向引用链接的颜色.
+  - **textalign** (CSS *text-align* value): 整体的文本对齐方式，默认为 
+  ``justify`` .
 
-* **nature** -- A greenish theme.  There are currently no options beyond
-  *nosidebar* and *sidebarwidth*.
+* **nature** -- 一个绿色色调主题.目前除了 *nosidebar* 和 *sidebarwidth* 
+没有其他配置选项。
 
-* **pyramid** -- A theme from the Pyramid web framework project, designed by
-  Blaise Laflamme.  There are currently no options beyond *nosidebar* and
-  *sidebarwidth*.
+* **pyramid** -- 来自Pyramid框架的一个主题，设计者是Blaise Laflamme. 目
+前除了 *nosidebar* 和 *sidebarwidth* 没有其他配置选项。
 
-* **haiku** -- A theme without sidebar inspired by the `Haiku OS user guide
-  <http://www.haiku-os.org/docs/userguide/en/contents.html>`_.  The following
-  options are supported:
+* **haiku** -- 一个没有边栏的主题，灵感来自 `Haiku OS user guide
+  <http://www.haiku-os.org/docs/userguide/en/contents.html>`_.支持以下
+  选项:
 
-  - **full_logo** (true or false, default false): If this is true, the header
-    will only show the :confval:`html_logo`.  Use this for large logos.  If this
-    is false, the logo (if present) will be shown floating right, and the
-    documentation title will be put in the header.
+  - **full_logo** (true 或 false, 默认为false): 如果选择true,头部将只会
+  显示:confval:`html_logo`.  Use this for large logos.如果设置为false, 
+  logo (如果存在)将会浮动在右边,文档标题将会显示在头部。
   - **textcolor**, **headingcolor**, **linkcolor**, **visitedlinkcolor**,
-    **hoverlinkcolor** (CSS colors): Colors for various body elements.
+    **hoverlinkcolor** (CSS colors): 各种Body元素的颜色.
 
-* **traditional** -- A theme resembling the old Python documentation.  There are
-  currently no options beyond *nosidebar* and *sidebarwidth*.
+* **traditional** -- 类似以前python文档的主题.目前除了 *nosidebar* 和 *sidebarwidth* 没有其他选项.
 
-* **epub** -- A theme for the epub builder.  This theme tries to save visual
-  space which is a sparse resource on ebook readers.  The following options
-  are supported:
+* **epub** -- 一个用于编译epub的主题. 这个主题尽力节省视觉空间,是哥ebook的稀缺资
+源。支持以下选项:
 
-  - **relbar1** (true or false, default true): If this is true, the
-    `relbar1` block is inserted in the epub output, otherwise it is omitted.
-  - **footer**  (true or false, default true): If this is true, the
-    `footer` block is inserted in the epub output, otherwise it is ommitted.
+  - **relbar1** (true 或 false,默认为true): 如果选择true,将会生成 `relbar1`
+  ,否则省略。
+  - **footer**  (true 或 false,默认为true): 如果选择true,将会生成 `footer`,
+  否则省略。
 
-Creating themes
+创建主题
 ---------------
 
 As said, themes are either a directory or a zipfile (whose name is the theme
