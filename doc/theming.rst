@@ -205,7 +205,7 @@ Sphinx内置了一些主题可供选择
 * **traditional** -- 类似以前python文档的主题.目前除了 *nosidebar* 和 *sidebarwidth* 没有其他选项.
 
 * **epub** -- 一个用于编译epub的主题. 这个主题尽力节省视觉空间,是哥ebook的稀缺资
-源。支持以下选项:
+  源。支持以下选项:
 
   - **relbar1** (true 或 false,默认为true): 如果选择true,将会生成 `relbar1`
   ,否则省略。
@@ -215,16 +215,15 @@ Sphinx内置了一些主题可供选择
 创建主题
 ---------------
 
-As said, themes are either a directory or a zipfile (whose name is the theme
-name), containing the following:
+如上文所说，主题是一个文件夹或zip文件(名字就是主题名),包含以下内容:
 
-* A :file:`theme.conf` file, see below.
-* HTML templates, if needed.
-* A ``static/`` directory containing any static files that will be copied to the
-  output static directory on build.  These can be images, styles, script files.
+* 一个:file:`theme.conf` 文件。
+* HTML模板(如果需要)
+* 一个包含静态文件的 ``static/``  文件夹，他将会被复制到构建目录的静态文件夹。静
+  态文件包括图片、样式表、脚本文件等。
 
-The :file:`theme.conf` file is in INI format [1]_ (readable by the standard
-Python :mod:`ConfigParser` module) and has the following structure:
+:file:`theme.conf` 文件应该是INI格式 [1]_ (可被python标准库的:mod:`ConfigParser`
+模块识别)，他的结构如下:
 
 .. sourcecode:: ini
 
@@ -236,27 +235,22 @@ Python :mod:`ConfigParser` module) and has the following structure:
     [options]
     variable = default value
 
-* The **inherit** setting gives the name of a "base theme", or ``none``.  The
-  base theme will be used to locate missing templates (most themes will not have
-  to supply most templates if they use ``basic`` as the base theme), its options
-  will be inherited, and all of its static files will be used as well.
+* **inherit** 设置为 ``base theme`` 或 ``none`` 。base thmes 将会被用于搜寻missi
+  ng的主题(如果选择 ``basic`` 作为basic主题，那么将不得不支持所有模板),他的选项将
+  会被继承，静态文件也一样。
 
-* The **stylesheet** setting gives the name of a CSS file which will be
-  referenced in the HTML header.  If you need more than one CSS file, either
-  include one from the other via CSS' ``@import``, or use a custom HTML template
-  that adds ``<link rel="stylesheet">`` tags as necessary.  Setting the
-  :confval:`html_style` config value will override this setting.
+* **stylesheet** 设置了一个将会被在HTML头部引用的CSS文件，如果你需要更多的CSS文件
+  , 或者通过CSS ``import`` 引入一个，或者使用一个定制的HTML模板，增加 ``<link re
+  l="stylesheet">`` 标签。设置 :confval:`html_style` 将会覆盖配置。
 
-* The **pygments_style** setting gives the name of a Pygments style to use for
-  highlighting.  This can be overridden by the user in the
-  :confval:`pygments_style` config value.
+* **pygments_style** 设置Pygments风格来使用高亮。他会被:confval:`pygments_style`
+  的配置覆盖。
 
-* The **options** section contains pairs of variable names and default values.
-  These options can be overridden by the user in :confval:`html_theme_options`
-  and are accessible from all templates as ``theme_<name>``.
+* **options** 包含成对的变量名字和值。这些选项会被:confval:`html_theme_options`
+  的配置所覆盖。
 
 
-Templating
+
 ~~~~~~~~~~
 
 The :doc:`guide to templating <templating>` is helpful if you want to write your
