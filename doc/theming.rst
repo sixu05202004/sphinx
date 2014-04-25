@@ -112,14 +112,15 @@ Sphinx内置了一些主题可供选择
   的基础。HTML包含了所有重要的元素，比如边栏，关系栏等。这里有一些被其他主
   题继承的选项:
 
-  - **nosidebar** (true 或 false): 不包括边栏.  默认是false.
+  - **nosidebar** (true 或 false): 不包括边栏，默认是false。
 
-  - **sidebarwidth** (一个 integer): 边栏的宽.  (以像素为单位，但是不要在参
-  数中加入 ``px`` 值.)  默认宽为230像素.
+  - **sidebarwidth** (一个 integer): 边栏的宽，(以像素为单位，但是不要在参
+  数中加入 ``px`` 值)  默认宽为230像素。
 
-* **default** -- 这是Sphinx的默认主题, 诸如 `the Pythondocumentation <http://docs.python.org/>` 就是采用这个模板.  你可以通过以下选项定制主题:
+* **default** -- 这是Sphinx的默认主题, 诸如 `the Pythondocumentation <http://docs.python.org/>` 
+就是采用这个模板。你可以通过以下选项定制主题:
 
-  - **rightsidebar** (true 或 false): 将边栏放在右边，默认是false.
+  - **rightsidebar** (true 或 false): 将边栏放在右边，默认是false。
 
   - **stickysidebar** (true 或 false): 边栏固定，使边栏不随页面的滚动而滚
   动,它可能不兼容所有浏览器。默认是false。
@@ -132,30 +133,30 @@ Sphinx内置了一些主题可供选择
   这里还有一些颜色和字体选项可以方便的更改主题的配色，不用写样式表。
 
   - **footerbgcolor** (CSS color): 页脚(footer)的背景颜色。
-  - **footertextcolor** (CSS color): 页脚(footer)的文本颜色.
-  - **sidebarbgcolor** (CSS color): 边栏的背景颜色.
-  - **sidebarbtncolor** (CSS color): 控制边栏折叠按钮的背景颜色
-  (当 *collapsiblesidebar* 是 true 的时候使用).
-  - **sidebartextcolor** (CSS color): 边栏的文本颜色.
-  - **sidebarlinkcolor** (CSS color): 边栏的链接颜色.
-  - **relbarbgcolor** (CSS color): 关系栏的背景颜色.
-  - **relbartextcolor** (CSS color): 关系栏的文本颜色.
-  - **relbarlinkcolor** (CSS color): 关系栏的链接颜色.
-  - **bgcolor** (CSS color): Body背景颜色.
-  - **textcolor** (CSS color): Body文本颜色.
-  - **linkcolor** (CSS color): Body链接颜色.
-  - **visitedlinkcolor** (CSS color): 已访问过链接颜色.
-  - **headbgcolor** (CSS color): 标题背景颜色.
-  - **headtextcolor** (CSS color): 标题文本颜色.
-  - **headlinkcolor** (CSS color): 标题链接颜色.
-  - **codebgcolor** (CSS color): 代码块的背景颜色.
+  - **footertextcolor** (CSS color): 页脚(footer)的文本颜色。
+  - **sidebarbgcolor** (CSS color): 边栏的背景颜色。
+  - **sidebarbtncolor** (CSS color): 控制边栏折叠按钮的背景颜色。
+  (当 *collapsiblesidebar* 是 true 的时候使用)。
+  - **sidebartextcolor** (CSS color): 边栏的文本颜色。
+  - **sidebarlinkcolor** (CSS color): 边栏的链接颜色。
+  - **relbarbgcolor** (CSS color): 关系栏的背景颜色。
+  - **relbartextcolor** (CSS color): 关系栏的文本颜色。
+  - **relbarlinkcolor** (CSS color): 关系栏的链接颜色。
+  - **bgcolor** (CSS color): Body背景颜色。
+  - **textcolor** (CSS color): Body文本颜色。
+  - **linkcolor** (CSS color): Body链接颜色。
+  - **visitedlinkcolor** (CSS color): 已访问过链接颜色。
+  - **headbgcolor** (CSS color): 标题背景颜色。
+  - **headtextcolor** (CSS color): 标题文本颜色。
+  - **headlinkcolor** (CSS color): 标题链接颜色。
+  - **codebgcolor** (CSS color): 代码块的背景颜色。
   - **codetextcolor** (CSS color): 代码块的默认文本颜色(如果没有配置高亮)。
 
-  - **bodyfont** (CSS font-family): 正常文本的字体.
-  - **headfont** (CSS font-family): 标题的字体.
+  - **bodyfont** (CSS font-family): 正常文本的字体。
+  - **headfont** (CSS font-family): 标题的字体。
 
 * **sphinxdoc** -- 主要用于文档的模板，特点是右边栏。目前除了 *nosidebar* 
-  和 *sidebarwidth*. 没有其他选项。
+  和 *sidebarwidth* 没有其他选项。
 
 * **scrolls** -- 一个更轻量的主题，基于 `jinja的文档主题 <http://jinja.pocoo.org/>` 。下面的颜色选项是可配置的:
 
@@ -167,47 +168,48 @@ Sphinx内置了一些主题可供选择
 
 * **agogo** -- Andi Albrecht创作的一个主题.支持下列选项:
 
-  - **bodyfont** (CSS font family): 正常文本的字体.
-  - **headerfont** (CSS font family): 标题字体.
-  - **pagewidth** (CSS length): 页面内容的宽度, 默认为70em.
-  - **documentwidth** (CSS length): 文档的宽度 (不带边栏),默认为50em.
-  - **sidebarwidth** (CSS length): 边栏的宽度, 默认为20em.
-  - **bgcolor** (CSS color): 背景颜色.
+  - **bodyfont** (CSS font family): 正常文本的字体。
+  - **headerfont** (CSS font family): 标题字体。
+  - **pagewidth** (CSS length): 页面内容的宽度, 默认为70em。
+  - **documentwidth** (CSS length): 文档的宽度 (不带边栏),默认为50em。
+  - **sidebarwidth** (CSS length): 边栏的宽度, 默认为20em。
+  - **bgcolor** (CSS color): 背景颜色。
   - **headerbg** (CSS value for "background"): 标题部分的背景颜色，默认
-  为渐变浅灰  .
+  为渐变浅灰。
   - **footerbg** (CSS value for "background"): 页脚部分的背景颜色，默认
-  为渐变浅灰  .
-  - **linkcolor** (CSS color): 整体链接颜色.
+  为渐变浅灰。
+  - **linkcolor** (CSS color): 整体链接颜色。
   - **headercolor1**, **headercolor2** (CSS color): <h1>标题和<h2>标题
   的背景颜色，默认为渐变浅灰。
-  - **headerlinkcolor** (CSS color): 题目中反向引用链接的颜色.
+  - **headerlinkcolor** (CSS color): 题目中反向引用链接的颜色。
   - **textalign** (CSS *text-align* value): 整体的文本对齐方式，默认为 
-  ``justify`` .
+  ``justify`` 。
 
-* **nature** -- 一个绿色色调主题.目前除了 *nosidebar* 和 *sidebarwidth* 
+* **nature** -- 一个绿色色调主题。目前除了 *nosidebar* 和 *sidebarwidth* 
 没有其他配置选项。
 
-* **pyramid** -- 来自Pyramid框架项目的一个主题，设计者是Blaise Laflamme.
+* **pyramid** -- 来自Pyramid框架项目的一个主题，设计者是Blaise Laflamme。
 目前除了 *nosidebar* 和 *sidebarwidth* 没有其他配置选项。
 
 * **haiku** -- 一个没有边栏的主题，灵感来自 `Haiku OS user guide
-  <http://www.haiku-os.org/docs/userguide/en/contents.html>`_.支持以下
+  <http://www.haiku-os.org/docs/userguide/en/contents.html>`_ 。支持以下
   选项:
 
-  - **full_logo** (true 或 false, 默认为false): 如果选择true,头部将只会
-  显示:confval:`html_logo`.通过这个选项可以设置大Logo.如果设置为false, 
-  logo (如果存在)将会浮动在右边,文档标题将会显示在头部。
+  - **full_logo** (true 或 false, 默认为false): 如果选择true，头部将只会
+  显示:confval:`html_logo` 。通过这个选项可以设置大Logo。如果设置为false， 
+  logo (如果存在)将会浮动在右边，文档标题将会显示在头部。
   - **textcolor**, **headingcolor**, **linkcolor**, **visitedlinkcolor**,
-    **hoverlinkcolor** (CSS colors): 各种Body元素的颜色.
+    **hoverlinkcolor** (CSS colors): 各种Body元素的颜色。
 
-* **traditional** -- 类似以前python文档的主题.目前除了 *nosidebar* 和 *sidebarwidth* 没有其他选项.
+* **traditional** -- 类似以前python文档的主题。目前除了 *nosidebar* 和
+*sidebarwidth* 没有其他选项。
 
 * **epub** -- 一个用于编译epub的主题. 这个主题尽力节省视觉空间,是ebook阅读
 器的稀缺资源。支持以下选项:
 
-  - **relbar1** (true 或 false,默认为true): 如果选择true,将会生成 `relbar1`
+  - **relbar1** (true 或 false,默认为true): 如果选择true，将会生成 `relbar1`
   ,否则省略。
-  - **footer**  (true 或 false,默认为true): 如果选择true,将会生成 `footer`,
+  - **footer**  (true 或 false,默认为true): 如果选择true，将会生成 `footer`,
   否则省略。
 
 创建主题
@@ -271,8 +273,8 @@ Sphinx内置了一些主题可供选择
 支持"静态模板"。
 
 如果位于 ``static/`` 目录的主题的文件名字以 ``_t`` 结尾，那么他将会被模板
-引擎解析, ``_t`` 将会被留下。比如， *default* 主题有一个 ``static/default.css_t`` 
+引擎解析, ``_`` 将会被留下。比如， *default* 主题有一个 ``static/default.css_t`` 
 文件，当文档用默认主题构建时，会输出 ``_static/default.css`` 。
 
 .. [1] :file:`conf.py`不应该是一个可执行的python文件，因为当主题分享的时候
-   这将回事一个不必要得安全风险。
+   这将会事一个不必要的安全风险。
